@@ -1,0 +1,28 @@
+{
+	"manifest_version" : 2,
+	"name" : "4PC Chat Spam",
+	"description" : "Extension to spam chat on 4pc server",
+	"version" : "1.0",
+	"browser_action" : {
+		"default_title" : "4PC Chat Spam",
+		"default_icon" : "icon.png",
+		"default_popup" : "popup.html"
+	},
+	"icons" : {
+		"16" : "icon16.png",
+		"48" : "icon48.png",
+		"128" : "icon128.png"
+  },
+  "content_security_policy" : "script-src 'self' 'unsafe-eval'; object-src 'self';",
+  "background" : {
+    "scripts" : ["event_script.js"],
+    "persistent" : false
+  },
+  "permissions" : ["storage", "tabs", "https://*/*", "http://*/*"],
+  "commands" : {
+		"spam chat" : {
+			"suggested_key" : {"default" : "Alt+Shift+3"},
+			"description" : "Spam Chat"
+		}
+  }
+}
