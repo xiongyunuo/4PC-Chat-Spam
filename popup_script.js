@@ -6,12 +6,12 @@ let areaID = "textarea";
 let errorID = "error";
 let spamID = "spam";
 let message = "Spam";
-let func = new Function("str", "return str;");
+let func = new Function("str", "n", "o_str", "return str;");
 let errorField = null;
 
 const parseFun = function() {
   try {
-    let func2 = new Function("str", values[1]);
+    let func2 = new Function("str", "n", "o_str", values[1]);
     if (values[1] && func2) {
       func = func2;
     }
